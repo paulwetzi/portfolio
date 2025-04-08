@@ -54,4 +54,8 @@
 	margin: 0 auto;
 	padding: 1rem;
   }
+
+#grad {
+	background-image: linear-gradient(to bottom right, red, yellow);
+}
   
