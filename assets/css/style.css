@@ -94,3 +94,11 @@ body {
 .rounded-button:hover{
 	background-color: #b33a15;
 }
+
+.icons {
+	width: 60px;
+	height: 60px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
