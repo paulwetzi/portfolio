@@ -1,33 +1,33 @@
-.first-color { 
-	color: #45eba5; 
-}
-	
-.second-color { 
-	color: #21aba5; 
+.first-color {
+	color: #45eba5;
 }
 
-.third-color { 
-	color: #1d566e; 
+.second-color {
+	color: #21aba5;
 }
 
-.fourth-color { 
-	color: #163a5f; 
+.third-color {
+	color: #1d566e;
 }
 
-.first-color-background { 
-	background: #45eba5; 
-}
-	
-.second-color-background { 
-	background: #21aba5; 
+.fourth-color {
+	color: #163a5f;
 }
 
-.third-color-background { 
-	background: #1d566e; 
+.first-color-background {
+	background: #45eba5;
 }
 
-.fourth-color-background { 
-	background: #163a5f; 
+.second-color-background {
+	background: #21aba5;
+}
+
+.third-color-background {
+	background: #1d566e;
+}
+
+.fourth-color-background {
+	background: #163a5f;
 }
 
 .profilepic {
@@ -53,30 +53,19 @@
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 1rem;
-  }
-
-/*
-#grad {
-	background-image: linear-gradient(to bottom right, red, yellow);
 }
-body {
-	background: linear-gradient(135deg, #163a5f, #1d566e, #21aba5, #45eba5);
-	background-size: 400% 400%;
-	animation: gradientAnimation 20s ease infinite;
-  }
-  
-  @keyframes gradientAnimation {
-	0% { background-position: 0% 50%; }
-	50% { background-position: 100% 50%; }
-	100% { background-position: 0% 50%; }
-  }*/
-  
-  .button.second-color-background:hover {
+
+.shadow {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.button.second-color-background:hover {
 	background-color: #1d566e;
 	color: #eeeeee;
 	transform: scale(1.05);
-  }
-  
+}
+
 .rounded-button {
 	width: 60px;
 	height: 60px;
@@ -91,8 +80,8 @@ body {
 	transition: background 0.8s;
 }
 
-.rounded-button:hover{
-	background-color: #b33a15;
+.rounded-button:hover {
+	background-color: #35b315;
 }
 
 .icons {
@@ -102,3 +91,15 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
+body {
+	background-color: #21aba5;
+}
+
+body {
+	background-image: linear-gradient(to right, 
+	  #1d566e, 
+	  #222831 30%, 
+	  #222831 70%, 
+	  #1d566e);
+  }
