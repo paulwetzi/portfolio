@@ -56,7 +56,7 @@
 }
 
 .shadow {
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -81,7 +81,7 @@
 }
 
 .rounded-button:hover {
-	background-color: #35b315;
+	background-color: #5dd63e;
 }
 
 .icons {
@@ -98,8 +98,8 @@ body {
 
 body {
 	background-image: linear-gradient(to right, 
-	  #1d566e, 
-	  #222831 30%, 
-	  #222831 70%, 
-	  #1d566e);
+	  #163a5f, 
+	  #21aba5 30%, 
+	  #21aba5 70%, 
+	  #163a5f);
   }
