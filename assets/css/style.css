@@ -6,39 +6,39 @@
 }
 
 .first-color {
-	color: (--first-color);
+	color: var(--first-color);
 }
 
 .second-color {
-	color: (--second-color);
+	color: var(--second-color);
 }
 
 .third-color {
-	color: (--third-color);
+	color: var(--third-color);
 }
 
 .fourth-color {
-	color: (--fourth-color);
+	color: var(--fourth-color);
 }
 
 .first-color-background {
-	background: (--first-color);
+	background: var(--first-color);
 }
 
 .second-color-background {
-	background: (--second-color);
+	background: var(--second-color);
 }
 
 .third-color-background {
-	background: (--third-color);
+	background: var(--third-color);
 }
 
 .fourth-color-background {
-	background: (--fourth-color);
+	background: var(--fourth-color);
 }
 
 body.darkmode {
-	--first-color: #fffbe0;
+	--first-color: #eeeeee;
 	--second-color: #393e46;
 	--third-color: #fcda05;
 	--fourth-color: #222831;
