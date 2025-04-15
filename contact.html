@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class=" second-color-background">
+<body><!-- class=" second-color-background"-->
   <header>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -34,7 +34,7 @@
       </div>
 
       <div id="navbarBasicExample" class="navbar-menu">
-        <div  class="navbar-start">
+        <div class="navbar-start">
           <a href="index.html" class="navbar-item">
             Home
           </a>
@@ -42,11 +42,11 @@
           <a href="contact.html" class="navbar-item">
             Contact me
           </a>
-          </div>
         </div>
+      </div>
 
 
-        <!--
+      <!--
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
@@ -64,55 +64,68 @@
   </header>
   <section class="section">
     <div class="content-wrapper">
-    <div class="section fourth-color-background">
-    <div class="container">
-      <h1 class="title first-color">Kontakt</h1>
-      <p class="subtitle second-color">
-        Du hast Fragen, ein Jobangebot oder willst einfach nur "Servus" sagen? Schreib mir gern! 😄
-      </p>
+      <div class="section fourth-color-background shadow">
+        <div class="container">
+          <h1 class="title first-color">Kontakt</h1>
+          <p class="subtitle second-color">
+            Du hast Fragen, ein Jobangebot oder willst einfach nur "Servus" sagen? Schreib mir gern! 😄
+          </p>
 
-      <!-- E-Mail-Adresse -->
-      <p class="third-color my-4">
-        📧 <strong>E-Mail:</strong>
-        <a href="mailto:deine.email@example.com">paul.iztew@gmail.com</a>
-      </p>
+          <!-- E-Mail-Adresse -->
+          <p class="third-color my-4">
+            📧 <strong>E-Mail:</strong>
+            <a href="mailto:deine.email@example.com">paul.iztew@gmail.com</a>
+          </p>
 
-      <!-- Social Media (optional) -->
-      <p class="third-color my-4">
-        🌐 <strong>GitHub:</strong>
-        <a href="https://github.com/paulwetzi" target="_blank">github.com/paulwetzi</a>
-      </p>
+          <!-- Social Media (optional) -->
+          <p class="third-color my-4">
+            🌐 <strong>GitHub:</strong>
+            <a href="https://github.com/paulwetzi" target="_blank">github.com/paulwetzi</a>
+          </p>
 
-      <!-- Kontaktformular -->
-      <form action="https://formspree.io/f/moqprlky" method="POST">
-        <div class="field">
-          <label class="label first-color">Name</label>
-          <div class="control">
-            <input class="input" type="text" name="name" placeholder="Dein Name" required>
-          </div>
+          <!-- Kontaktformular -->
+          <form action="https://formspree.io/f/xwplzawp" method="POST">
+            <div class="field">
+              <label class="label first-color">Name</label>
+              <div class="control">
+                <input class="input" type="text" name="name" placeholder="Dein Name" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label first-color">E-Mail</label>
+              <div class="control">
+                <input class="input" type="email" name="email" placeholder="dein@email.com" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label first-color">Nachricht</label>
+              <div class="control">
+                <textarea class="textarea" name="message" placeholder="Schreib mir etwas..." required></textarea>
+              </div>
+            </div>
+
+            <div class="control">
+              <button type="submit" class="button second-color-background">Absenden</button>
+            </div>
+          </form>
         </div>
-
-        <div class="field">
-          <label class="label first-color">E-Mail</label>
-          <div class="control">
-            <input class="input" type="email" name="email" placeholder="dein@email.com" required>
-          </div>
-        </div>
-
-        <div class="field">
-          <label class="label first-color">Nachricht</label>
-          <div class="control">
-            <textarea class="textarea" name="message" placeholder="Schreib mir etwas..." required></textarea>
-          </div>
-        </div>
-
-        <div class="control">
-          <button type="submit" class="button second-color-background">Absenden</button>
-        </div>
-      </form>
+      </div>
     </div>
-</div></div>
   </section>
+
+  <section class="hero fourth-color-background is-justify-content-center is-align-items-center">
+    <div class="hero-body has-text-centered">
+      <div class="is-flex is-flex-direction-column is-align-items-center">
+        <p class="title">© 2025 Paul Wetzi | </p>
+        <a class="rounded-button m-2" href="hhttps://github.com/paulwetzi">
+          <img src="assets/svg/steam-brands.svg">
+        </a>
+      </div>
+    </div>
+  </section>
+
 
   <script src="assets/js/script"></script>
 </body>
