@@ -1,41 +1,54 @@
+:root {
+	--first-color: #45eba5;
+	--second-color: #21aba5;
+	--third-color: #1d566e;
+	--fourth-color: #163a5f;
+}
+
 .first-color {
-	color: #45eba5;
+	color: (--first-color);
 }
 
 .second-color {
-	color: #21aba5;
+	color: (--second-color);
 }
 
 .third-color {
-	color: #1d566e;
+	color: (--third-color);
 }
 
 .fourth-color {
-	color: #163a5f;
+	color: (--fourth-color);
 }
 
 .first-color-background {
-	background: #45eba5;
+	background: (--first-color);
 }
 
 .second-color-background {
-	background: #21aba5;
+	background: (--second-color);
 }
 
 .third-color-background {
-	background: #1d566e;
+	background: (--third-color);
 }
 
 .fourth-color-background {
-	background: #163a5f;
+	background: (--fourth-color);
+}
+
+body.darkmode {
+	--first-color: #fffbe0;
+	--second-color: #393e46;
+	--third-color: #fcda05;
+	--fourth-color: #222831;
+	
 }
 
 .profilepic {
 	max-width: 100%;
 	height: auto;
 	border-radius: 12px;
-	/*display: block;
-	margin: 0 auto;*/
 }
 
 .section {
@@ -93,13 +106,14 @@
 }
 
 body {
-	background-color: #21aba5;
+	background-color: var(--second-color);
 }
 
 body {
 	background-image: linear-gradient(to right, 
-	  #163a5f, 
-	  #21aba5 30%, 
-	  #21aba5 70%, 
-	  #163a5f);
+	  var(--fourth-color), 
+	  var(--second-color) 30%, 
+	  var(--second-color) 70%, 
+	  var(--fourth-color));
   }
+  
