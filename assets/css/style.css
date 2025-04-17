@@ -117,3 +117,18 @@ body {
 	  var(--fourth-color));
   }
   
+ @media (max-width: 768px) {
+	.order-mobile-1 {
+		order: 1;
+	}
+	.order-mobile-2 {
+		order: 2;
+	}
+	.columns {
+		flex-wrap: wrap;
+	}
+	.column {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+ }
