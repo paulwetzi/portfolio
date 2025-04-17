@@ -39,10 +39,18 @@
 
 body.darkmode {
 	--first-color: #eeeeee;
-	--second-color: #393e46;
+	--second-color: #5a6069;
 	--third-color: #fcda05;
 	--fourth-color: #222831;
 	
+}
+
+.hero.is-success {
+	background-color: var(--first-color);
+}
+
+body.darkmode .hero.is-success {
+	background-color: var(--third-color);
 }
 
 .profilepic {
@@ -82,7 +90,7 @@ body.darkmode {
 .rounded-button {
 	width: 60px;
 	height: 60px;
-	background-color: rgb(228, 231, 197);
+	background-color: var(--third-color);
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -94,8 +102,9 @@ body.darkmode {
 }
 
 .rounded-button:hover {
-	background-color: #5dd63e;
+	background-color: var(--first-color);
 }
+
 
 .icons {
 	width: 60px;
@@ -132,3 +141,9 @@ body {
 		flex-direction: column !important;
 	}
  }
+
+#logo {
+	height: 48px;
+	width: auto;
+	max-height: 48px;
+}

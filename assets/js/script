@@ -20,6 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+const logo = document.getElementById("logo");
+
 document.getElementById("dark-toggle").addEventListener("click", () => {
   document.body.classList.toggle("darkmode");
+
+  if (document.body.classList.contains("darkmode")) {
+    logo.src = "assets/img/logo-dark.png";
+  } else {
+    logo.src = "assets/img/logo-light.png"
+  }
 });
+
+
+
