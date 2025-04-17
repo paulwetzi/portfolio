@@ -3,6 +3,7 @@
 	--second-color: #21aba5;
 	--third-color: #1d566e;
 	--fourth-color: #163a5f;
+	--bulma-navbar-item-img-max-height: 128px;
 }
 
 .first-color {
@@ -52,6 +53,24 @@ body.darkmode {
 body.darkmode .hero.is-success {
 	background-color: var(--third-color);
 }
+
+.navbar-item#dark-toggle img {
+	max-height: none;
+	height: 50 !important;
+	width: auto;
+}
+
+#dark-toggle img {
+	height: 50px !important;
+	width: auto;
+	transition: transform 0.2s ease;
+
+}
+
+/*
+#dark-toggle:hover img {
+	transition: scale(1.1);
+}*/
 
 .profilepic {
 	max-width: 100%;
