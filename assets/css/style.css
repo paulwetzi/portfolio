@@ -67,9 +67,20 @@ body.darkmode .hero.is-success {
 
 }
 
+
+.darkmode .navbar {
+	color: rgb(28, 29, 46);
+}
+
 /*
-#dark-toggle:hover img {
-	transition: scale(1.1);
+.darkmode .navbar {
+	background-color: var(--fourth-color);
+}
+
+.darkmode .navbar-item,
+.darkmode .navbar-item:focus,
+.darkmode .navbar-item:hover {
+	color: var(--first-color);
 }*/
 
 .profilepic {
@@ -167,37 +178,6 @@ body {
 	max-height: 48px;
 }
 
-/*
-.bat-container  {
-	position: relativen;
-	display: inline-block;
-	width: 64px;
-	height: 64px;
-	padding: 0;
-	margin: 0;
+.button {
+	background-color: var(--second-color);
 }
-
-.bat-container img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-}
-
-.bat-eyes {
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-	pointer-events: none;
-	z-index: 2;
-}
-
-.bat-container:hover .bat-eyes {
-	opacity: 1;
-}
-
-.bat-base {
-	z-index: 1;
-}*/

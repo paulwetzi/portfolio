@@ -22,8 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById("dark-toggle");
   const batLogo = document.getElementById("bat-logo");
+  const logo = document.getElementById("logo");
 
-  if (toggle && batLogo) {
+  if (toggle && batLogo && logo) {
 
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("darkmode");
@@ -31,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
       batLogo.src = batLogo.src.includes("Bat-normal.png")
         ? "assets/img/Bat-glowing.png"
         : "assets/img/Bat-normal.png"
+
+      logo.src = document.body.classList.contains("darkmode")
+        ? "assets/img/logo-dark.png"
+        : "assets/img/logo-light.png";
     });
   }
 })
