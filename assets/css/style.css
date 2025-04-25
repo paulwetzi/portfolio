@@ -166,3 +166,38 @@ body {
 	width: auto;
 	max-height: 48px;
 }
+
+/*
+.bat-container  {
+	position: relativen;
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	padding: 0;
+	margin: 0;
+}
+
+.bat-container img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.bat-eyes {
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.bat-container:hover .bat-eyes {
+	opacity: 1;
+}
+
+.bat-base {
+	z-index: 1;
+}*/
