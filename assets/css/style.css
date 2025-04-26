@@ -146,6 +146,20 @@ body.darkmode .hero.is-success {
 
 body {
 	background-color: var(--second-color);
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2 {
+	font-family: 'Bangers', cursive;
+	letter-spacing: 2px;
+}
+
+p {
+	font-size: 1.2rem;
+}
+
+#score {
+	font-size: 5rem;
 }
 
 body {

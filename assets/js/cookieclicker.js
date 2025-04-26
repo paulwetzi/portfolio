@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let score = 0;
     let cookiesPerSecond = 0;
 
+
     const upgrades = {
         Maus: { amount: 0, cps: 0.5, price: 15, buttonId: "buy-cursour"},
         Oma: { amount: 0, cps: 2, price: 100, buttonId: "buy-grandma"},
@@ -12,10 +13,40 @@ document.addEventListener('DOMContentLoaded', () => {
         Fabrik: { amount: 0, cps: 25, price: 5000, buttonId: "buy-factory"}
     };
 
+    const savedScore = localStorage.getItem('cookieScore');
+    const savedUpgrades = localStorage.getItem("cookieUpgrades");
+
+    if (savedScore !== null) {
+        score = parseInt(savedScore);
+        updateScore();
+    }
+
+    if(savedUpgrades !== null) {
+        const parsedUpgrades = JSON.parse(savedUpgrades);
+
+        Object.keys(parsedUpgrades).forEach(key => {
+            if (upgrades[key]) {
+                upgrades[key].amount = parsedUpgrades[key].amount;
+                upgrades[key].price = parsedUpgrades[key].price;
+
+                const button = document.getElementById(upgrades[key].buttonId);
+                if (button) {
+                    const textElement = button.querySelector('p');
+                    if(textElement) {
+                        textElement.textContent = `${key} (${upgrades[key].amount}) - ${upgrades[key].price} 🍪`;
+                    }
+                }
+            }
+        });
+        updateCookiesPerSecond();
+    }
+
     if (cookie) {
         cookie.addEventListener('click', () => {
             score++;
-            scoreDisplay.textContent = score;
+            updateScore();
+            saveGame();
+            //scoreDisplay.textContent = score;
             cookie.classList.add('click-animation');
 
             setTimeout(() => {
@@ -36,8 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     upgrade.price = Math.floor(upgrade.price * 1.15);
 
                     const textElement = button.querySelector('p');
-                    textElement.textContent = `${key} (${upgrade.amount}) - ${upgrade.price} 🍪`;
-
+                    if (textElement) {
+                        textElement.textContent = `${key} (${upgrade.amount}) - ${upgrade.price} 🍪`;
+                    }
+                   
                     button.classList.add('upgrade-animation');
                     setTimeout(() => {
                         button.classList.remove('upgrade-animation');
@@ -45,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     updateCookiesPerSecond();
                     updateScore();
+                    saveGame();
                 } else {
                     alert("Nicht genug Cookies");
                 }
@@ -66,6 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateScore() {
         scoreDisplay.textContent = Math.floor(score);
+    }
+
+    function saveGame() {
+        localStorage.setItem('cookieScore', score);
+        localStorage.setItem('cookieUpgrades', JSON.stringify(upgrades));
     }
 
 });
