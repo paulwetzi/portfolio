@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const upgrades = {
         Maus: { amount: 0, cps: 0.5, price: 15, buttonId: "buy-cursour"},
         Oma: { amount: 0, cps: 2, price: 100, buttonId: "buy-grandma"},
-        Baurnhof: { amount: 0, cps: 5, price: 500, buttonId: "buy-farm"},
+        Bauernhof: { amount: 0, cps: 5, price: 500, buttonId: "buy-farm"},
         Mine: { amount: 0, cps: 10, price: 1000, buttonId: "buy-mine"},
         Fabrik: { amount: 0, cps: 25, price: 5000, buttonId: "buy-factory"}
     };
@@ -34,7 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     score -= upgrade.price;
                     upgrade.amount++;
                     upgrade.price = Math.floor(upgrade.price * 1.15);
-                    button.innerText = `${key} (${upgrade.amount}) - ${upgrade.price} 🍪`;
+
+                    const textElement = button.querySelector('p');
+                    textElement.textContent = `${key} (${upgrade.amount}) - ${upgrade.price} 🍪`;
+
+                    button.classList.add('upgrade-animation');
+                    setTimeout(() => {
+                        button.classList.remove('upgrade-animation');
+                    }, 400);
+
                     updateCookiesPerSecond();
                     updateScore();
                 } else {
