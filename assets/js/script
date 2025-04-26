@@ -24,8 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const batLogo = document.getElementById("bat-logo");
   const logo = document.getElementById("logo");
 
-  if (toggle && batLogo && logo) {
+  if (localStorage.getItem("darkmode") === "enabled") {
+    document.body.classList.add("darkmode");
+    if (batLogo) batLogo.src = "assets/img/Bat-glowing.png";
+    if (logo) logo.src = "assets/img/logo-dark.png";
+  }
 
+  if (toggle && batLogo && logo) {
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("darkmode");
 
@@ -36,9 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
       logo.src = document.body.classList.contains("darkmode")
         ? "assets/img/logo-dark.png"
         : "assets/img/logo-light.png";
+
+        if (document.body.classList.contains("darkmode")) {
+          localStorage.setItem("darkmode", "enabled");
+        } else {
+          localStorage.setItem("darkmode", "disabled");
+        }
     });
   }
-})
-
+});
 
 
