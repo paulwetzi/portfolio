@@ -69,7 +69,7 @@ body.darkmode .hero.is-success {
 
 
 .darkmode .navbar {
-	color: rgb(28, 29, 46);
+	background-color: rgb(20, 22, 26);
 }
 
 /*
@@ -180,4 +180,23 @@ body {
 
 .button {
 	background-color: var(--second-color);
+}
+
+#cookie {
+	max-width: 400px;
+}
+
+.box {
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.click-animation {
+	animation: pop 0.2s ease;
+}
+
+@keyframes pop {
+	0% {transform: scale(1);}
+	50% {transform: scale(1.2);}
+	100% {transform: scale(1);}
 }
